@@ -30,18 +30,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body {
+html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  height: 100%;
   font-family: var(--font);
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
   min-width: 320px;
+  width: 100%;
 }
 
 #root {
@@ -71,9 +73,17 @@ ul {
 }
 
 .container {
+  width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--section-padding);
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 0 16px;
+  }
 }
 
 @media (max-width: 1024px) {

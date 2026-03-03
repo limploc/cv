@@ -20,6 +20,8 @@
   font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.8;
+  max-width: 65ch;
+  overflow-wrap: break-word;
 }
 
 .about__highlights {
@@ -36,6 +38,8 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .about__highlight-card:hover {
@@ -46,6 +50,8 @@
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--accent);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .about__highlight-label {
@@ -78,5 +84,15 @@
 
   .about__highlight-card {
     padding: 16px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about__text p {
+    font-size: 0.95rem;
   }
 }

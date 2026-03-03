@@ -14,6 +14,8 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 14px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .tech-stack__card:hover {
@@ -45,6 +47,8 @@
   font-size: 0.9rem;
   color: var(--text-secondary);
   font-weight: 400;
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 
 .tech-stack__dot {
@@ -79,5 +83,20 @@
 
   .tech-stack__card {
     padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stack__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tech-stack__card-label {
+    font-size: 0.7rem;
+  }
+
+  .tech-stack__item {
+    font-size: 0.875rem;
   }
 }
