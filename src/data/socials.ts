@@ -7,17 +7,17 @@ export interface Social {
 export const socials: Social[] = [
   {
     label: 'GitHub',
-    url: 'https://github.com/septianrenaldi',
+    url: 'https://github.com/limploc',
     icon: 'github',
   },
   {
     label: 'Instagram',
-    url: 'https://instagram.com/septianrenaldi',
+    url: 'https://instagram.com/iamrenaall',
     icon: 'instagram',
   },
   {
     label: 'Email',
-    url: 'mailto:septianrenaldi@example.com',
+    url: 'mailto:septianrnaldi.dev@gmail.com',
     icon: 'mail',
   },
 ];
