@@ -16,7 +16,7 @@ function Hero() {
         <div className="hero__avatar-wrapper">
           <img
             className="hero__avatar"
-            src="/profile.jpg"
+            src="/enal.jpeg"
             alt="Septian Renaldi Dowongi"
             onError={(e) => {
               const target = e.currentTarget;
