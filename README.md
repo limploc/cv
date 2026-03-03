@@ -19,55 +19,84 @@ If you are developing a production application, we recommend updating the config
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    # CV — Personal Website
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    Deskripsi singkat
+    ------------------
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    Ini adalah situs personal / CV yang dibuat dengan React, TypeScript dan Vite. Proyek ini berisi komponen untuk `Hero`, `About`, `Projects`, `TechStack`, dan beberapa komponen UI kecil. Data proyek dan sosial disimpan di folder `src/data` sehingga konten mudah diperbarui.
+    https://cv-enall.vercel.app/
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    Fitur utama
+    -----------
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    - Halaman berorientasi portofolio/CV.
+    - Struktur komponen modular di `src/components`.
+    - Dibangun dengan Vite untuk pengembangan cepat (HMR).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    Teknologi
+    ---------
+
+    - React 19
+    - TypeScript
+    - Vite
+    - lucide-react (ikon)
+
+    Struktur proyek 
+    -------------------------
+
+    - `index.html` — entry HTML.
+    - `src/main.tsx` — titik masuk aplikasi.
+    - `src/App.tsx` — komponen utama.
+    - `src/components/` — kumpulan komponen UI (Hero, About, Projects, TechStack, dll.).
+    - `src/data/` — data untuk projects, socials, techStack.
+    - `vite.config.ts`, `tsconfig.*.json`, `package.json` — konfigurasi build dan dev.
+
+    Prasyarat
+    ---------
+
+    - Node.js v16 atau lebih baru (direkomendasikan v18+)
+    - npm (atau `pnpm` / `yarn` jika Anda pilih)
+
+    Instalasi & Menjalankan (lokal)
+    ------------------------------
+
+    1. Clone repository
+
+    ```bash
+    git clone <url-repo-anda>
+    cd cv
+    ```
+
+    2. Pasang dependensi
+
+    ```bash
+    npm install
+    ```
+
+    3. Jalankan server pengembangan
+
+    ```bash
+    npm run dev
+    ```
+
+    4. Build untuk produksi
+
+    ```bash
+    npm run build
+    ```
+
+    5. Preview hasil build (opsional)
+
+    ```bash
+    npm run preview
+    ```
+
+    Catatan: `package.json` pada proyek ini menyediakan script berikut:
+
+    - `dev` — menjalankan Vite di mode pengembangan.
+    - `build` — menjalankan `tsc -b` lalu `vite build`.
+    - `preview` — menjalankan `vite preview` untuk melihat hasil build.
+    - `lint` — jalankan ESLint.
+
+    File: `package.json` berisi skrip yang relevan untuk instalasi dan menjalankan proyek.
