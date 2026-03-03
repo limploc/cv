@@ -155,3 +155,47 @@
   background: var(--accent);
   opacity: 0.4;
 }
+
+@media (max-width: 1024px) {
+  .hero__name {
+    font-size: 2.5rem;
+  }
+
+  .hero__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 600px;
+    padding: 0 20px;
+  }
+
+  .hero__name {
+    font-size: 2rem;
+  }
+
+  .hero__title {
+    font-size: 1.05rem;
+  }
+
+  .hero__tagline {
+    font-size: 0.9rem;
+  }
+
+  .hero__avatar-wrapper {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .hero__avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero__scroll-indicator {
+    bottom: 20px;
+  }
+}

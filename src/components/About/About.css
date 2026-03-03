@@ -54,3 +54,29 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 72px 0;
+  }
+
+  .about__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 56px 0;
+  }
+
+  .about__highlights {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .about__highlight-card {
+    padding: 16px 14px;
+  }
+}

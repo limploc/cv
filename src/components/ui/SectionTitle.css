@@ -26,3 +26,23 @@
   background: var(--accent);
   border-radius: 2px;
 }
+
+@media (max-width: 1024px) {
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-title__heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  .section-title__heading {
+    font-size: 1.75rem;
+  }
+}

@@ -76,3 +76,15 @@ ul {
   padding: var(--section-padding);
 }
 
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 0 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-padding: 0 20px;
+  }
+}
+
